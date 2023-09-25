@@ -1,0 +1,253 @@
+﻿
+@{
+    ViewData["Title"] = "SignUp Page";
+}
+
+@model WebApplication3.Models.Signup
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="~/css/Contacts.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/reset.css" />
+	<link rel="stylesheet" href="~/css/jquery.passwordRequirements.css" />
+
+
+    <style>
+
+      h1{
+        font-size: xx-large;
+      }
+
+        body {
+            background-image: url("/Images/1.jpg");
+            
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+            padding-left:750px;
+        }
+
+        input[type=email], input[type=password],input[type=text] {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 20px 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 30%;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+        
+
+       
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container1 {
+            width:600px;
+            padding-left:100px;
+            
+            right:100px;
+            background-color:white;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+
+
+
+
+   
+
+    </style>
+ 
+
+    
+</head>
+<body>
+
+
+   
+
+    <form class="abc" method="POST" autocomplete="off">
+      
+        <div class="container1">
+        <h1 style="height:50px;font-size:50px;">SIGN UP FORM</h1> 
+             <div class="a1" style="text-align:centre">
+              <label for="name"><b>First Name</b></label>
+            <input type="text" placeholder="Enter Name" name="First_Name" id="FirstName" required>
+           <span id='message2'></span>
+           </div>
+           <br>
+           <div class="a2">
+   <label for="name"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Name" name="Last_Name" id="LastName">
+             <span id='message3'></span>
+             </div>
+             <br>
+
+
+             <div class="a3">
+            <label for="uname" ><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="UserName" id="UserName" required>
+              <br>
+              <span id='message4'></span>
+             <br>
+             <span id='message6'></span>
+              </div>
+            
+               <div class="a3">
+            <label for="uname" ><b>EmailId</b></label>
+            <input type="email" placeholder="Enter EmailId" name="EmailId" id="EmailId" required>
+              </div>
+
+              
+              <br>
+              <div class="a4">
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="Password" id="password" class="pr-password" required>
+              <br>
+              <div>
+              <input type="checkbox" onclick="myFunction()">Show Password
+              </div>
+              <span id='message5'></span>
+              </div>
+
+             <br>
+
+             <div class="a5">
+             <label for="psw"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="Confirm_Password" id="confirm_password" required>
+            <br>
+            <div>
+            <input type="checkbox" onclick="myFunction1()">Show Password
+             </div>            
+            <span id='message'></span>
+            </div>
+             
+            <button type="submit" id="Button_id" asp-action="create" asp-controller="Signup">Sign up</button>
+           
+        </div>
+
+        
+    </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="~/lib/jquery/dist/jquery.passwordRequirements.min.js"></script>
+   <script src="~/lib/jquery/dist/jquery.passwordRequirements.js"></script>  
+
+      <script src="~/lib/jquery/dist/jquery.Name.js"></script>
+            <script src="~/lib/jquery/dist/jquery.Password.js"></script>
+
+
+    <script>window.jQuery || document.write("<script src='~/lib/jquery/dist/jquery-1.9.1.min.js'>\x3C/script>")</script>
+   
+    
+   
+
+
+    <script>
+
+
+   
+
+        /* trigger when page is ready */
+        $(document).ready(function (){
+            $(".pr-password").passwordRequirements();
+        });
+       
+    function myFunction() {
+      var x = document.getElementById("password");
+     if (x.type === "password") {
+      x.type = "text";
+     } else {
+      x.type = "password";
+     }
+    }
+
+         
+    function myFunction1() {
+      var x = document.getElementById("confirm_password");
+     if (x.type === "password") {
+      x.type = "text";
+     } else {
+      x.type = "password";
+     }
+    } 
+
+    
+
+    </script>  
+     
+
+     
+
+
+
+     <script>
+        /* trigger when page is ready */
+          $(document).ready(function (){
+         $("#Button_id").click(function(e){
+                if(($('#message2').html().length != 0)||($('#message4').html().length != 0)||($('#message4').html().length != 0)||($('#message').html()=='Not Matching' )){
+                    e.preventDefault();
+                }
+                
+            });
+            });
+
+
+        
+
+
+
+
+    </script>
+ 
+
+
+
+    @* <script>window.jQuery || document.write("<script src='~/lib/jquery/dist/jquery-1.9.1.min.js' async>\x3C/script>")</script>
+
+    <script>
+        /* trigger when page is ready */
+        $(document).ready(function (){
+            $(".pr-password").passwordRequirements();
+        });
+    </script> *@
+
+
+
+  
+   
+       
+</body>
+</html>
+
+
+ 
+        

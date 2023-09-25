@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="~/css/StyleSheet.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" /> 
+
+<style>
+
+body{
+background-image:url("/Images/1234.jpg");
+}
+h1 {
+  text-align: center;
+}
+div{
+    margin-left: 1000px;
+    text-align:left;
+        
+}
+
+
+
+</style>
+</head>
+
+<h1>WELCOME TO ASP.NET WEBSITE</h1>
+
+
+<body>
+        
+ 
+
+        <div class="HOME">
+        <form method="post">
+            <button asp-action="Index" asp-controller="Login">SIGN IN</button>
+        </form>
+        <br>
+        <form  method="post">
+            <button asp-action="Index" asp-controller="Signup">SIGN UP</button>
+        </form>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+ 
+
+
+</body>
+</html>
+
+
+
